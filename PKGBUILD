@@ -6,7 +6,7 @@ pkgdesc="Sync GitHub SSH public keys to Linux user authorized_keys"
 arch=('any')
 url="https://github.com/yourusername/github-ssh-sync"
 license=('MIT')
-depends=('nodejs')
+depends=('nvm')
 install=github-ssh-sync.install
 source=('sync-github-keys.js'
         'config.example.json'
