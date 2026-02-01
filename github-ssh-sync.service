@@ -5,7 +5,8 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c 'source /usr/share/nvm/init-nvm.sh && node /opt/github-ssh-sync/sync-github-keys.js'
+Environment="NVM_DIR=/root/.nvm"
+ExecStart=/bin/bash -c 'source $NVM_DIR/nvm.sh && node /opt/github-ssh-sync/sync-github-keys.js'
 
 [Install]
 WantedBy=multi-user.target
