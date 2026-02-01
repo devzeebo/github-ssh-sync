@@ -1,0 +1,11 @@
+[Unit]
+Description=Sync GitHub SSH public keys to authorized_keys
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/node /opt/github-ssh-sync/sync-github-keys.js
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+post_install() {
+    echo ">>> Create ~/.config/github-ssh-sync/config.json for each user you want to sync"
+    echo ">>> Example: cp /usr/share/github-ssh-sync/config.example.json ~/.config/github-ssh-sync/config.json"
+    echo ">>> Then enable the timer: systemctl enable --now github-ssh-sync.timer"
+}
+
+post_upgrade() {
+    post_install
+}
